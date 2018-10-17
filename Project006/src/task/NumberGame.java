@@ -34,7 +34,7 @@ public class NumberGame extends JFrame implements ActionListener {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Random random = new Random();
-		num = random.nextInt(1010) % 101;
+		num = random.nextInt(101);
 
 		head = new head1();
 		add(head, BorderLayout.NORTH);
@@ -91,7 +91,7 @@ public class NumberGame extends JFrame implements ActionListener {
 				}
 
 				String pattern = "^[0-9]*\\.[0-9]*$";
-				f = field.getValue().toString();
+				f = field.getText();
 				boolean i = Pattern.matches(pattern, f);
 				try {
 					if (i == true) {
